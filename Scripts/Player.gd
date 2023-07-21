@@ -1,11 +1,15 @@
-extends Sprite2D
+extends CharacterBody2D
 
+@export var speed: int = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	print("Hehe player script (THERE IS NOTHING HERE)")
+# get the keys the player is facing then turns it into directional velocity
+func get_input():
+	var inputDirection: Vector2 = Input.get_vector("left", "right", "up", "down");
+	set_velocity(inputDirection * speed);
+	
+	print(inputDirection);
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+# calls get input and handles moving the player
+func _physics_process(delta):
+	get_input();
+	move_and_slide();
