@@ -17,5 +17,7 @@ speed = 200
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_lo63p")
 
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_njovx")

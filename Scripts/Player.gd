@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 # Vars
+# Nodes
+@onready var ray : RayCast2D = $RayCast2D
 # Export vars
 @export var speed: int = 0
 @export var tileSize = 16
@@ -24,4 +26,7 @@ func _unhandled_input(event):
 
 # Moves the player based on the tilemap and input
 func move(dir):
-	position += inputs[dir] * tileSize
+	ray.target_position = inputs[dir] * tileSize
+	ray.force_raycast_update()
+	if !ray.is_colliding():
+		position += inputs[dir] * tileSize
