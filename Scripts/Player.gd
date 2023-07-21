@@ -4,7 +4,6 @@ extends CharacterBody2D
 # Nodes
 @onready var ray : RayCast2D = $RayCast2D
 # Export vars
-@export var speed: int = 0
 @export var tileSize = 16
 # Other
 var inputs = {"right": Vector2.RIGHT,
