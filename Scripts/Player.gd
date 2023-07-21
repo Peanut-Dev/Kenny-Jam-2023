@@ -24,7 +24,8 @@ func _unhandled_input(event):
 		if event.is_action_pressed(dir):
 			move(dir)
 
-# Moves the player based on the tilemap and input
+# Check if the player is about to make an illegal move (Collision)
+# If move is legal, move the player by one tile
 func move(dir):
 	ray.target_position = inputs[dir] * tileSize
 	ray.force_raycast_update()
