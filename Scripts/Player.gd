@@ -5,28 +5,27 @@ extends CharacterBody2D
 @onready var ray : RayCast2D = $RayCast2D
 # Export vars
 @export var tileSize = 16
-# Other
-var inputs = {"right": Vector2.RIGHT,
-			"left": Vector2.LEFT,
-			"up": Vector2.UP,
-			"down": Vector2.DOWN}
-
 
 # On ready, snap player to grid
 func _ready():
-	position = position.snapped(Vector2.ONE * tileSize)
-	position += Vector2.ONE * tileSize/2
+	position = position.snapped(Vector2.ONE * tileSize) - Vector2.ONE * tileSize/2;
 
 # If player presses movement key, trigger move func
 func _unhandled_input(event):
-	for dir in inputs.keys():
-		if event.is_action_pressed(dir):
-			move(dir)
+	if (event.is_action_pressed("up")):
+		move(Vector2.UP);
+	if (event.is_action_pressed("down")):
+		move(Vector2.DOWN);
+	if (event.is_action_pressed("left")):
+		move(Vector2.LEFT);
+	if (event.is_action_pressed("right")):
+		move(Vector2.RIGHT);
 
 # Check if the player is about to make an illegal move (Collision)
 # If move is legal, move the player by one tile
-func move(dir):
-	ray.target_position = inputs[dir] * tileSize
-	ray.force_raycast_update()
+func move(dir: Vector2):
+	ray.target_position = dir * tileSize;
+	ray.force_raycast_update();
+	
 	if !ray.is_colliding():
-		position += inputs[dir] * tileSize
+		position += dir * tileSize;
