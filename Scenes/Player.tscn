@@ -8,7 +8,7 @@ atlas = ExtResource("1_m7jfc")
 region = Rect2(425, 0, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njovx"]
-size = Vector2(16, 16)
+size = Vector2(12, 14)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("2_ckchm")

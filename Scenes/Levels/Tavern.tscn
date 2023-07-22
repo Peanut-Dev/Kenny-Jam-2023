@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_qcaco"]
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="2_35vfb"]
 [ext_resource type="PackedScene" uid="uid://ctnk0yvmy4cje" path="res://Scenes/Door.tscn" id="3_r4j7r"]
-[ext_resource type="PackedScene" path="res://Scenes/JobBoard.tscn" id="4_aatj8"]
+[ext_resource type="PackedScene" uid="uid://uptashm237nb" path="res://Scenes/JobBoard.tscn" id="4_aatj8"]
 [ext_resource type="PackedScene" uid="uid://bj3pjau2kkq8l" path="res://Scenes/UI/JobListingsUI.tscn" id="5_ok5pk"]
 
 [node name="Tavern" type="Node2D"]
@@ -24,7 +24,6 @@ scene = "res://Scenes/Levels/Town.tscn"
 position = Vector2(312, 184)
 
 [node name="UI" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 640.0
