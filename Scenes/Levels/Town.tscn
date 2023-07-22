@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://uy3khaxgrb8p"]
+[gd_scene load_steps=6 format=3 uid="uid://uy3khaxgrb8p"]
 
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_axvle"]
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="2_c5rr5"]
 [ext_resource type="PackedScene" uid="uid://ctnk0yvmy4cje" path="res://Scenes/Door.tscn" id="3_nsusb"]
+[ext_resource type="PackedScene" uid="uid://3r523tqmg7w7" path="res://Scenes/GenericInteractable.tscn" id="4_nv2nm"]
+[ext_resource type="Script" path="res://Scripts/Interactable/DialogueInteractable.gd" id="4_t85td"]
 
 [node name="Town" type="Node2D"]
 
@@ -23,3 +25,33 @@ scene = "res://Scenes/Levels/Tavern.tscn"
 [node name="Door2" parent="Doors" instance=ExtResource("3_nsusb")]
 position = Vector2(56, 216)
 scene = "res://Scenes/Levels/Forest.tscn"
+
+[node name="Interactables" type="Node2D" parent="."]
+
+[node name="Grave1" parent="Interactables" instance=ExtResource("4_nv2nm")]
+position = Vector2(120, 88)
+script = ExtResource("4_t85td")
+dialoguePath = "res://Data/Dialogue/Grave1.json"
+textSpeed = 0.03
+interactText = "Read"
+
+[node name="Grave2" parent="Interactables" instance=ExtResource("4_nv2nm")]
+position = Vector2(152, 88)
+script = ExtResource("4_t85td")
+dialoguePath = "res://Data/Dialogue/Grave2.json"
+textSpeed = 0.03
+interactText = "Read"
+
+[node name="Grave3" parent="Interactables" instance=ExtResource("4_nv2nm")]
+position = Vector2(184, 88)
+script = ExtResource("4_t85td")
+dialoguePath = "res://Data/Dialogue/Grave3.json"
+textSpeed = 0.03
+interactText = "Read"
+
+[node name="Grave4" parent="Interactables" instance=ExtResource("4_nv2nm")]
+position = Vector2(120, 136)
+script = ExtResource("4_t85td")
+dialoguePath = "res://Data/Dialogue/Grave4.json"
+textSpeed = 0.03
+interactText = "Read"

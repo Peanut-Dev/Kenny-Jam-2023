@@ -1,20 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://dem37vnymerub"]
+[gd_scene load_steps=4 format=3 uid="uid://3r523tqmg7w7"]
 
-[ext_resource type="Script" path="res://Scripts/Interactable/JobBoard.gd" id="1_fvt3r"]
-[ext_resource type="FontFile" uid="uid://bpvbpriimlfrk" path="res://Fonts/Kenney Mini.ttf" id="2_52p6d"]
+[ext_resource type="FontFile" uid="uid://bpvbpriimlfrk" path="res://Fonts/Kenney Mini.ttf" id="2_88j81"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1pqk"]
-size = Vector2(30, 30)
+size = Vector2(16, 16)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rv823"]
-font = ExtResource("2_52p6d")
+font = ExtResource("2_88j81")
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
-[node name="JobBoard" type="Area2D"]
-script = ExtResource("1_fvt3r")
-showInteractText = true
-interactText = "Open Job Board"
+[node name="GenericInteractable" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_w1pqk")
