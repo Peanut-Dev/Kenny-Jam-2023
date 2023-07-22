@@ -11,7 +11,7 @@ var isInRange = false;
 
 func _ready():
 	self.body_entered.connect(InRange);
-	self.body_exited.connect(LeavesRange)
+	self.body_exited.connect(LeavesRange);
 
 # When player is in range, give prompt to interact
 func InRange(body : CharacterBody2D):
