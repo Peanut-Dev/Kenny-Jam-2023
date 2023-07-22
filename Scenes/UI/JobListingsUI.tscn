@@ -1,10 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bj3pjau2kkq8l"]
+[gd_scene load_steps=3 format=3 uid="uid://bj3pjau2kkq8l"]
 
-[ext_resource type="Texture2D" uid="uid://bwuqcafoskya4" path="res://UIAssets/panel_brown.png" id="1_a48qf"]
-[ext_resource type="Texture2D" uid="uid://jvqtxjbbwi3v" path="res://UIAssets/panelInset_beige.png" id="2_iaist"]
-[ext_resource type="Theme" uid="uid://bd104pghjqawm" path="res://Themes/MainTheme.tres" id="3_rwdlj"]
+[ext_resource type="Texture2D" uid="uid://bwuqcafoskya4" path="res://Sprites/UI/panel_brown.png" id="1_a48qf"]
+[ext_resource type="Texture2D" uid="uid://jvqtxjbbwi3v" path="res://Sprites/UI/panelInset_beige.png" id="2_iaist"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ps8ko"]
 
 [node name="JobListingsUI" type="Control"]
 layout_mode = 3
@@ -36,38 +34,3 @@ offset_right = -0.0400391
 offset_bottom = -3.05176e-05
 texture = ExtResource("2_iaist")
 expand_mode = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="WoodTexture/TextureRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="JobListButtons" type="VBoxContainer" parent="WoodTexture/TextureRect/MarginContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme = ExtResource("3_rwdlj")
-
-[node name="Job1" type="CheckButton" parent="WoodTexture/TextureRect/MarginContainer/JobListButtons"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 8
-button_group = SubResource("ButtonGroup_ps8ko")
-
-[node name="Job2" type="CheckButton" parent="WoodTexture/TextureRect/MarginContainer/JobListButtons"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 8
-button_group = SubResource("ButtonGroup_ps8ko")
-
-[node name="Job3" type="CheckButton" parent="WoodTexture/TextureRect/MarginContainer/JobListButtons"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 8
-button_group = SubResource("ButtonGroup_ps8ko")
