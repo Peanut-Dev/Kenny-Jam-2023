@@ -24,6 +24,7 @@ scene = "res://Scenes/Levels/Town.tscn"
 position = Vector2(312, 184)
 
 [node name="UI" type="Control" parent="."]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 offset_right = 640.0

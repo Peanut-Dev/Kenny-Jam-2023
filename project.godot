@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Levels/Town.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+JobData="*res://Scripts/Data/JobData.gd"
+
 [display]
 
 window/size/viewport_width=640

@@ -1,0 +1,19 @@
+{
+	"Jobs": [
+		{
+			"ID" : 1,
+			"Name" : "Placeholder name 1",
+			"Description" : "Placeholder description 1"
+		},
+		{
+			"ID" : 2,
+			"Name" : "Placeholder name 2",
+			"Description" : "Placeholder description 2"
+		},
+		{
+			"ID" : 3,
+			"Name" : "Placeholder name 3",
+			"Description" : "Placeholder description 3"
+		}
+	]
+}
