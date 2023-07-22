@@ -12,7 +12,6 @@ size = Vector2(12, 14)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("2_ckchm")
-speed = 200
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_lo63p")
