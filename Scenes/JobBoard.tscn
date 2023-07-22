@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://uptashm237nb"]
+
+[ext_resource type="Script" path="res://Scripts/Interactable/JobBoard.gd" id="1_fvt3r"]
+[ext_resource type="FontFile" uid="uid://bpvbpriimlfrk" path="res://Fonts/Kenney Mini.ttf" id="2_52p6d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1pqk"]
+size = Vector2(30, 30)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rv823"]
+font = ExtResource("2_52p6d")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="JobBoard" type="Area2D"]
+script = ExtResource("1_fvt3r")
+interactText = "open job listings"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w1pqk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -100.0
+offset_top = -60.0
+offset_right = 100.0
+offset_bottom = -37.0
+label_settings = SubResource("LabelSettings_rv823")
+horizontal_alignment = 1
+autowrap_mode = 2

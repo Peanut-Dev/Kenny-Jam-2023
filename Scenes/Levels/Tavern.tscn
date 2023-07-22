@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqgwospqru37w"]
+[gd_scene load_steps=7 format=3 uid="uid://bqgwospqru37w"]
 
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_qcaco"]
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="2_35vfb"]
 [ext_resource type="PackedScene" uid="uid://ctnk0yvmy4cje" path="res://Scenes/Door.tscn" id="3_r4j7r"]
+[ext_resource type="PackedScene" uid="uid://uptashm237nb" path="res://Scenes/JobBoard.tscn" id="4_aatj8"]
+[ext_resource type="PackedScene" uid="uid://bj3pjau2kkq8l" path="res://Scenes/UI/JobListingsUI.tscn" id="5_ok5pk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8ksa"]
 bg_color = Color(0.27451, 0.176471, 0.239216, 1)
@@ -36,3 +38,26 @@ position = Vector2(320, 256)
 position = Vector2(320, 280)
 scale = Vector2(2, 1)
 scene = "res://Scenes/Levels/Town.tscn"
+
+[node name="JobBoard" parent="." instance=ExtResource("4_aatj8")]
+position = Vector2(312, 184)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="JobListingsUI" parent="UI" instance=ExtResource("5_ok5pk")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.291
+anchor_top = 0.028
+anchor_right = 0.691
+anchor_bottom = 0.458
+offset_left = -0.240005
+offset_top = -0.0799999
+offset_right = -0.240021
+offset_bottom = 0.119995
