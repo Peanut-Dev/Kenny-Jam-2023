@@ -3,6 +3,7 @@ extends CharacterBody2D
 # Vars
 # Nodes
 @onready var ray : RayCast2D = $RayCast2D
+@onready var runningTimer : Timer = $RunningTimer
 # Export vars
 @export var tileSize = 16
 
@@ -10,16 +11,21 @@ extends CharacterBody2D
 func _ready():
 	position = position.snapped(Vector2.ONE * tileSize) - Vector2.ONE * tileSize/2;
 
-# If player presses movement key, trigger move func
-func _unhandled_input(event):
-	if (event.is_action_pressed("up")):
+# If player presses movement key, trigger move func.
+# Waits 0.2 seconds in case player is holding down a movement key and wants to move automatically
+func _physics_process(delta):
+	if Input.is_action_pressed("up") and runningTimer.is_stopped() == true:
 		move(Vector2.UP);
-	if (event.is_action_pressed("down")):
+		runningTimer.start()
+	if Input.is_action_pressed("down") and runningTimer.is_stopped() == true:
 		move(Vector2.DOWN);
-	if (event.is_action_pressed("left")):
+		runningTimer.start()
+	if Input.is_action_pressed("left") and runningTimer.is_stopped() == true:
 		move(Vector2.LEFT);
-	if (event.is_action_pressed("right")):
+		runningTimer.start()
+	if Input.is_action_pressed("right") and runningTimer.is_stopped() == true:
 		move(Vector2.RIGHT);
+		runningTimer.start()
 
 # Check if the player is about to make an illegal move (Collision)
 # If move is legal, move the player by one tile
