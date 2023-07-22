@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://uptashm237nb"]
+[gd_scene load_steps=5 format=3 uid="uid://dem37vnymerub"]
 
 [ext_resource type="Script" path="res://Scripts/Interactable/JobBoard.gd" id="1_fvt3r"]
 [ext_resource type="FontFile" uid="uid://bpvbpriimlfrk" path="res://Fonts/Kenney Mini.ttf" id="2_52p6d"]

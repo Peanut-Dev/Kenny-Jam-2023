@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://bj3pjau2kkq8l"]
 
-[ext_resource type="Texture2D" uid="uid://bwuqcafoskya4" path="res://UIAssets/panel_brown.png" id="1_a48qf"]
-[ext_resource type="Texture2D" uid="uid://jvqtxjbbwi3v" path="res://UIAssets/panelInset_beige.png" id="2_iaist"]
+[ext_resource type="Texture2D" uid="uid://bwuqcafoskya4" path="res://Sprites/UI/panel_brown.png" id="1_a48qf"]
+[ext_resource type="Texture2D" uid="uid://jvqtxjbbwi3v" path="res://Sprites/UI/panelInset_beige.png" id="2_iaist"]
+
 
 [node name="JobListingsUI" type="Control"]
 layout_mode = 3
