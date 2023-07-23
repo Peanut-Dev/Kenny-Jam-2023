@@ -59,15 +59,18 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 8
 button_group = SubResource("ButtonGroup_ps8ko")
+metadata/jobID = 0
 
 [node name="Job2" type="CheckButton" parent="WoodTexture/TextureRect/MarginContainer/JobListButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 8
 button_group = SubResource("ButtonGroup_ps8ko")
+metadata/jobID = 0
 
 [node name="Job3" type="CheckButton" parent="WoodTexture/TextureRect/MarginContainer/JobListButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 8
 button_group = SubResource("ButtonGroup_ps8ko")
+metadata/jobID = 0

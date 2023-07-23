@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqgwospqru37w"]
+[gd_scene load_steps=7 format=3 uid="uid://bqgwospqru37w"]
 
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_qcaco"]
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="2_35vfb"]
 [ext_resource type="PackedScene" uid="uid://ctnk0yvmy4cje" path="res://Scenes/Door.tscn" id="3_r4j7r"]
 [ext_resource type="PackedScene" uid="uid://dem37vnymerub" path="res://Scenes/JobBoard.tscn" id="4_aatj8"]
 [ext_resource type="PackedScene" uid="uid://bj3pjau2kkq8l" path="res://Scenes/UI/JobListingsUI.tscn" id="5_ok5pk"]
+[ext_resource type="PackedScene" uid="uid://bk0f3ah38kt3a" path="res://Scenes/UI/JobDescription.tscn" id="6_0d551"]
 
 [node name="Tavern" type="Node2D"]
 
@@ -44,3 +45,8 @@ offset_left = -0.240005
 offset_top = -0.0799999
 offset_right = -0.240021
 offset_bottom = 0.119995
+
+[node name="JobDescription" parent="UI" instance=ExtResource("6_0d551")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1

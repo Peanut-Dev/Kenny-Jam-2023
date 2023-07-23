@@ -2,18 +2,20 @@
 	"Jobs": [
 		{
 			"ID" : 1,
-			"Name" : "Placeholder name 1",
-			"Description" : "Placeholder description 1"
+			"Name" : "Find watch",
+			"Description" : "Someone has lost their watch in the forest, they are wanting you to go out and find it"
 		},
 		{
 			"ID" : 2,
-			"Name" : "Placeholder name 2",
-			"Description" : "Placeholder description 2"
+			"Name" : "Missing sword",
+			"Description" : "A lost sword waiting to be reunited with its owner, go and locate the sword"
 		},
 		{
 			"ID" : 3,
-			"Name" : "Placeholder name 3",
-			"Description" : "Placeholder description 3"
+			"Name" : "Misplaced shield",
+			"Description" : "Looks like a warriors shield has been lost in combat in the woods go find it!
+			
+			... What could've scared a warrior so much they dropped their sword"
 		}
 	]
 }
