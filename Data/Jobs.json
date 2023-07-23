@@ -2,8 +2,8 @@
 	"Jobs": [
 		{
 			"ID" : 1,
-			"Name" : "Find watch",
-			"Description" : "Someone has lost their watch in the forest, they are wanting you to go out and find it"
+			"Name" : "Find necklace",
+			"Description" : "Someone has lost their necklace in the forest, they are wanting you to go out and find it"
 		},
 		{
 			"ID" : 2,

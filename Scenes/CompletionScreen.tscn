@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://cefa3xs0mbwat"]
+
+[ext_resource type="FontFile" uid="uid://bpvbpriimlfrk" path="res://Fonts/Kenney Mini.ttf" id="1_8awew"]
+[ext_resource type="Script" path="res://Scripts/CompletionScreen.gd" id="1_r8vvy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xnwuv"]
+font = ExtResource("1_8awew")
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_weigg"]
+bg_color = Color(0.6, 0.6, 0.6, 0.415686)
+
+[node name="CompletionScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r8vvy")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Job complete!"
+label_settings = SubResource("LabelSettings_xnwuv")
+horizontal_alignment = 1
+
+[node name="JobCompleted" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Job completed:"
+label_settings = SubResource("LabelSettings_xnwuv")
+
+[node name="MoneyEarned" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Money earned: (not yet implimented)"
+label_settings = SubResource("LabelSettings_xnwuv")
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_8awew")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_weigg")
+text = "Continue"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="continueButtonPressed"]

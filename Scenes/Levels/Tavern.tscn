@@ -2,8 +2,8 @@
 
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_qcaco"]
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="2_35vfb"]
-[ext_resource type="PackedScene" uid="uid://ctnk0yvmy4cje" path="res://Scenes/Door.tscn" id="3_r4j7r"]
-[ext_resource type="PackedScene" uid="uid://dem37vnymerub" path="res://Scenes/JobBoard.tscn" id="4_aatj8"]
+[ext_resource type="PackedScene" uid="uid://ctnk0yvmy4cje" path="res://Scenes/Interactables/Door.tscn" id="3_r4j7r"]
+[ext_resource type="PackedScene" uid="uid://dem37vnymerub" path="res://Scenes/Interactables/JobBoard.tscn" id="4_aatj8"]
 [ext_resource type="PackedScene" uid="uid://bj3pjau2kkq8l" path="res://Scenes/UI/JobListingsUI.tscn" id="5_ok5pk"]
 [ext_resource type="PackedScene" uid="uid://bk0f3ah38kt3a" path="res://Scenes/UI/JobDescription.tscn" id="6_0d551"]
 
