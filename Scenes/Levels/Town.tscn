@@ -26,6 +26,7 @@ scene = "res://Scenes/Levels/Tavern.tscn"
 [node name="Door2" parent="Doors" instance=ExtResource("3_nsusb")]
 position = Vector2(56, 216)
 scene = "res://Scenes/Levels/Forest.tscn"
+isForestDoor = true
 
 [node name="Interactables" type="Node2D" parent="."]
 
