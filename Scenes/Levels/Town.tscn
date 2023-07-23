@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://uy3khaxgrb8p"]
+[gd_scene load_steps=7 format=3 uid="uid://uy3khaxgrb8p"]
 
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_axvle"]
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="2_c5rr5"]
 [ext_resource type="PackedScene" uid="uid://ctnk0yvmy4cje" path="res://Scenes/Door.tscn" id="3_nsusb"]
 [ext_resource type="PackedScene" uid="uid://3r523tqmg7w7" path="res://Scenes/GenericInteractable.tscn" id="4_nv2nm"]
 [ext_resource type="Script" path="res://Scripts/Interactable/DialogueInteractable.gd" id="4_t85td"]
+[ext_resource type="PackedScene" uid="uid://bk0f3ah38kt3a" path="res://Scenes/UI/JobDescription.tscn" id="6_yn2aa"]
 
 [node name="Town" type="Node2D"]
 
@@ -55,3 +56,15 @@ script = ExtResource("4_t85td")
 dialoguePath = "res://Data/Dialogue/Grave4.json"
 textSpeed = 0.03
 interactText = "Read"
+
+[node name="UI" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 360.0
+
+[node name="JobDescription" parent="UI" instance=ExtResource("6_yn2aa")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
