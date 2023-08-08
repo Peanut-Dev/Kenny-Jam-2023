@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://yur8t2hngt0f"]
+
+[ext_resource type="PackedScene" uid="uid://3r523tqmg7w7" path="res://Scenes/Interactables/GenericInteractable.tscn" id="1_wh03q"]
+[ext_resource type="Texture2D" uid="uid://2xaqtvoy4y6h" path="res://Sprites/1bit.png" id="2_30ve6"]
+[ext_resource type="Script" path="res://Scripts/Interactable/MissingItems.gd" id="2_54uhm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo4ar"]
+atlas = ExtResource("2_30ve6")
+region = Rect2(663, 34, 16, 16)
+
+[node name="Shield" instance=ExtResource("1_wh03q")]
+script = ExtResource("2_54uhm")
+jobID = 3
+showInteractText = true
+interactText = "Pickup lost shield"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_jo4ar")

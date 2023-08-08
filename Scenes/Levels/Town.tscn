@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://uy3khaxgrb8p"]
+[gd_scene load_steps=8 format=3 uid="uid://uy3khaxgrb8p"]
 
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_axvle"]
+[ext_resource type="AudioStream" uid="uid://bmasmrmbbk5ym" path="res://Audio/Ambience/Forest Instrumental Amb (Day).mp3" id="1_d8wqa"]
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="2_c5rr5"]
 [ext_resource type="PackedScene" uid="uid://ctnk0yvmy4cje" path="res://Scenes/Interactables/Door.tscn" id="3_nsusb"]
 [ext_resource type="PackedScene" uid="uid://3r523tqmg7w7" path="res://Scenes/Interactables/GenericInteractable.tscn" id="4_nv2nm"]
@@ -8,6 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://bk0f3ah38kt3a" path="res://Scenes/UI/JobDescription.tscn" id="6_yn2aa"]
 
 [node name="Town" type="Node2D"]
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_d8wqa")
+autoplay = true
+bus = &"Ambience"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_axvle")

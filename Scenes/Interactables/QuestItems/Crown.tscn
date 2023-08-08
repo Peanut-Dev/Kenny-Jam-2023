@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://c36ci6o51txbd"]
+
+[ext_resource type="PackedScene" uid="uid://3r523tqmg7w7" path="res://Scenes/Interactables/GenericInteractable.tscn" id="1_av273"]
+[ext_resource type="Script" path="res://Scripts/Interactable/MissingItems.gd" id="2_y3rnn"]
+[ext_resource type="Texture2D" uid="uid://2xaqtvoy4y6h" path="res://Sprites/1bit.png" id="3_vp2gc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkwgg"]
+atlas = ExtResource("3_vp2gc")
+region = Rect2(731, 34, 16, 16)
+
+[node name="Crown" instance=ExtResource("1_av273")]
+script = ExtResource("2_y3rnn")
+jobID = 4
+showInteractText = true
+interactText = "Pickup lost Crown"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_lkwgg")

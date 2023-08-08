@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://12e8lclt0rrw"]
+
+[ext_resource type="PackedScene" uid="uid://3r523tqmg7w7" path="res://Scenes/Interactables/GenericInteractable.tscn" id="1_2gj5f"]
+[ext_resource type="Script" path="res://Scripts/Interactable/shop.gd" id="2_wx5ne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7fxf"]
+size = Vector2(30, 30)
+
+[node name="Shop" instance=ExtResource("1_2gj5f")]
+script = ExtResource("2_wx5ne")
+showInteractText = true
+interactText = "Open up shop"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_g7fxf")

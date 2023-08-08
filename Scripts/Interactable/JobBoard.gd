@@ -16,21 +16,29 @@ func _process(delta):
 		
 		jobListingsUI.visible = !jobListingsUI.visible;
 		
-		var i = 0
+		randomize()
 		for button in jobListButtons.get_children():
-			print(button.name);
-			print(JobData.itemData["Jobs"][i]);
-			
-			button.set_text(JobData.itemData["Jobs"][i]["Name"]);
-			
-			button.set_meta("jobID", JobData.itemData["Jobs"][i]["ID"]);
+			await SelectJob(button)
 			
 			button.pressed.connect(jobSelected);
 			print("Signal connected");
-			
-			i += 1;
 		
 		jobListButtons.get_child(0).grab_focus();
+
+# Method that is called when selecting a job for each button
+func SelectJob(button):
+	var i = randi() % JobData.itemData["Jobs"].size()
+	
+	if JobData.itemData["Jobs"][i]["Completed"] == true:
+		SelectJob(button)
+		return
+	
+	print(button.name);
+	print(JobData.itemData["Jobs"][i]);
+	
+	button.set_text(JobData.itemData["Jobs"][i]["Name"]);
+	button.set_meta("jobID", JobData.itemData["Jobs"][i]["ID"]);
+
 
 # When a button is pressed, save the selected job
 func jobSelected():

@@ -33,28 +33,20 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="StoryTextContainer" type="VBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+visible = false
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="StoryText" type="Label" parent="MarginContainer/StoryTextContainer"]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Job complete!"
+text = "Story text"
 label_settings = SubResource("LabelSettings_xnwuv")
 horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="JobCompleted" type="Label" parent="MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Job completed:"
-label_settings = SubResource("LabelSettings_xnwuv")
-
-[node name="MoneyEarned" type="Label" parent="MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Money earned: (not yet implimented)"
-label_settings = SubResource("LabelSettings_xnwuv")
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="MarginContainer/StoryTextContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
@@ -63,4 +55,43 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_weigg")
 text = "Continue"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="continueButtonPressed"]
+[node name="JobComplete" type="VBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/JobComplete"]
+layout_mode = 2
+text = "Job complete!"
+label_settings = SubResource("LabelSettings_xnwuv")
+horizontal_alignment = 1
+
+[node name="JobCompleted" type="Label" parent="MarginContainer/JobComplete"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Job completed:"
+label_settings = SubResource("LabelSettings_xnwuv")
+
+[node name="MoneyEarned" type="Label" parent="MarginContainer/JobComplete"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Money earned: "
+label_settings = SubResource("LabelSettings_xnwuv")
+
+[node name="Balance" type="Label" parent="MarginContainer/JobComplete"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Balance: "
+label_settings = SubResource("LabelSettings_xnwuv")
+
+[node name="Button" type="Button" parent="MarginContainer/JobComplete"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_8awew")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_weigg")
+text = "Continue"
+
+[connection signal="pressed" from="MarginContainer/StoryTextContainer/Button" to="." method="continueButtonPressed"]
+[connection signal="pressed" from="MarginContainer/JobComplete/Button" to="." method="continueButtonPressed"]

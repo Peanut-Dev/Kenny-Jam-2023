@@ -3,19 +3,49 @@
 		{
 			"ID" : 1,
 			"Name" : "Find necklace",
-			"Description" : "Someone has lost their necklace in the forest, they are wanting you to go out and find it"
+			"Description" : "Someone has lost their necklace in the forest, they are wanting you to go out and find it",
+			"Reward" : 5,
+			"Completed" : false,
+			"Hint" : "The trees hold the truth"
 		},
 		{
 			"ID" : 2,
 			"Name" : "Missing sword",
-			"Description" : "A lost sword waiting to be reunited with its owner, go and locate the sword"
+			"Description" : "A lost sword waiting to be reunited with its owner, go and locate the sword",
+			"Reward" : 5,
+			"Completed" : false,
+			"Hint" : "For a great monster lives beyond the bridge to the west"
 		},
 		{
 			"ID" : 3,
 			"Name" : "Misplaced shield",
 			"Description" : "Looks like a warriors shield has been lost in combat in the woods go find it!
 			
-			... What could've scared a warrior so much they dropped their sword"
+			... What could've scared a warrior so much they dropped their sword",
+			"Reward" : 5,
+			"Completed" : false,
+			"StoryText" : "As you pick up the shield you start to notice that theres something wrong...
+			
+			The shield has some oddly weird claw marks across it, very different to anything you're used to.",
+			"Hint" : "Something screams from within the ruins, forever lost in a endless labyrinth of lost hope and screams"
+		},
+		{
+			"ID" : 4,
+			"Name" : "Missing crown",
+			"Description" : "A crown is a sign of power and wealth, but what is a king without their crown.
+			
+			Help reunite the owner with their crown before their power and wealth vanishes.",
+			"Reward": 10,
+			"Completed" : false,
+			"Hint" : "Next to the pond the king slept"
+		},
+		{
+			"ID" : 5,
+			"Name" : "Missing Pickaxe",
+			"Description" : "Help locate a miners long lost pickaxe!",
+			"Reward": 5,
+			"Completed" : false,
+			"Hint" : "Where a campfire is, a miner is said to be seen nearby"
 		}
 	]
 }

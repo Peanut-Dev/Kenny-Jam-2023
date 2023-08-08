@@ -1,13 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqgwospqru37w"]
+[gd_scene load_steps=9 format=3 uid="uid://bqgwospqru37w"]
 
+[ext_resource type="AudioStream" uid="uid://ddqnkjmdhoe0n" path="res://Audio/Ambience/Tavern Instrumental Amb.mp3" id="1_dv85e"]
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_qcaco"]
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="2_35vfb"]
 [ext_resource type="PackedScene" uid="uid://ctnk0yvmy4cje" path="res://Scenes/Interactables/Door.tscn" id="3_r4j7r"]
 [ext_resource type="PackedScene" uid="uid://dem37vnymerub" path="res://Scenes/Interactables/JobBoard.tscn" id="4_aatj8"]
 [ext_resource type="PackedScene" uid="uid://bj3pjau2kkq8l" path="res://Scenes/UI/JobListingsUI.tscn" id="5_ok5pk"]
 [ext_resource type="PackedScene" uid="uid://bk0f3ah38kt3a" path="res://Scenes/UI/JobDescription.tscn" id="6_0d551"]
+[ext_resource type="PackedScene" uid="uid://12e8lclt0rrw" path="res://Scenes/Interactables/shop.tscn" id="7_rdbwb"]
 
 [node name="Tavern" type="Node2D"]
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_dv85e")
+autoplay = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_qcaco")
@@ -24,6 +30,9 @@ scene = "res://Scenes/Levels/Town.tscn"
 [node name="JobBoard" parent="." instance=ExtResource("4_aatj8")]
 process_mode = 3
 position = Vector2(312, 184)
+
+[node name="Shop" parent="." instance=ExtResource("7_rdbwb")]
+position = Vector2(376, 200)
 
 [node name="UI" type="Control" parent="."]
 process_mode = 3

@@ -3,6 +3,7 @@ extends CharacterBody2D
 # Vars
 # Nodes
 @onready var jobDescriptionUI : Control = get_node("%JobDescription")
+@onready var DirectionalLightNode : DirectionalLight2D = get_node("%DirectionalLight2D")
 @onready var ray : RayCast2D = $RayCast2D
 @onready var runningTimer : Timer = $RunningTimer
 # Export vars
@@ -33,6 +34,8 @@ func _physics_process(delta):
 			return
 		
 		jobDescriptionUI.visible = !jobDescriptionUI.visible
+		if get_tree().get_current_scene().get_name() == "Forest":
+			DirectionalLightNode.visible = !DirectionalLightNode.visible
 		
 		jobDescriptionUI.get_node("%DescriptionLabel").set_text(JobData.itemData["Jobs"][JobData.currentJob - 1]["Description"])
 
