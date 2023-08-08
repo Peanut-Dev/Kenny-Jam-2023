@@ -46,6 +46,14 @@
 			"Reward": 5,
 			"Completed" : false,
 			"Hint" : "Where a campfire is, a miner is said to be seen nearby"
+		},
+		{
+			"ID" : 6,
+			"Name" : "Lost bow",
+			"Description" : "A hunter has lost his bow and is needing someone to help find it",
+			"Reward" : 5,
+			"Completed" : false,
+			"Hint" : "A cabbage patch is usually where wild animals love to hang out the most"
 		}
 	]
 }

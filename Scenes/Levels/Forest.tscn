@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b60hcccgm5aog"]
+[gd_scene load_steps=20 format=3 uid="uid://b60hcccgm5aog"]
 
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="1_20urm"]
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_hfbwt"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://jc07db6awqfn" path="res://Scenes/Interactables/QuestItems/Necklace.tscn" id="4_s0kxo"]
 [ext_resource type="PackedScene" uid="uid://il26q51dbfnq" path="res://Scenes/Interactables/QuestItems/pickaxe.tscn" id="6_lmyta"]
 [ext_resource type="PackedScene" uid="uid://c36ci6o51txbd" path="res://Scenes/Interactables/QuestItems/Crown.tscn" id="7_11sdp"]
+[ext_resource type="PackedScene" uid="uid://cnw3vlvnre0ut" path="res://Scenes/Interactables/QuestItems/Bow.tscn" id="8_7lyu5"]
 [ext_resource type="Script" path="res://Scripts/UI/ClosedEyes.gd" id="8_8olcb"]
 [ext_resource type="AudioStream" uid="uid://byp6fbgs8c84h" path="res://Audio/SFX/Campfire_1.wav" id="8_ss770"]
 [ext_resource type="AudioStream" uid="uid://d4llfgokqmt74" path="res://Audio/Ambience/horror_amb_v3_constant_59.wav" id="9_f14i1"]
@@ -72,6 +73,9 @@ position = Vector2(152, -648)
 
 [node name="Pickaxe" parent="Interactables" instance=ExtResource("6_lmyta")]
 position = Vector2(1320, -360)
+
+[node name="Bow" parent="Interactables" instance=ExtResource("8_7lyu5")]
+position = Vector2(-168, 968)
 
 [node name="Lights" type="Node2D" parent="."]
 
