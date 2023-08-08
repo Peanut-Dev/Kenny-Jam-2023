@@ -12,6 +12,7 @@
 [node name="Tavern" type="Node2D"]
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("1_dv85e")
 autoplay = true
 
