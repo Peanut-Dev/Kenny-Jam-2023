@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b60hcccgm5aog"]
+[gd_scene load_steps=28 format=3 uid="uid://b60hcccgm5aog"]
 
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="1_20urm"]
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_hfbwt"]
@@ -14,6 +14,9 @@
 [ext_resource type="AudioStream" uid="uid://byp6fbgs8c84h" path="res://Audio/SFX/Campfire_1.wav" id="8_ss770"]
 [ext_resource type="AudioStream" uid="uid://d4llfgokqmt74" path="res://Audio/Ambience/horror_amb_v3_constant_59.wav" id="9_f14i1"]
 [ext_resource type="FontFile" uid="uid://bpvbpriimlfrk" path="res://Fonts/Kenney Mini.ttf" id="10_y6rcr"]
+[ext_resource type="Texture2D" uid="uid://13pn0j1iwweo" path="res://Sprites/RainAnimation.png" id="15_pjg0s"]
+[ext_resource type="Script" path="res://Scripts/Rain.gd" id="16_om7dv"]
+[ext_resource type="AudioStream" uid="uid://chi3jkhuwdj6n" path="res://Audio/Ambience/heavy rain 3.wav" id="17_ixwit"]
 
 [sub_resource type="Gradient" id="Gradient_bpxt5"]
 offsets = PackedFloat32Array(0, 0.674208)
@@ -35,7 +38,50 @@ outline_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_najfl"]
 bg_color = Color(0.27451, 0.176471, 0.239216, 1)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_lusf4"]
+atlas = ExtResource("15_pjg0s")
+region = Rect2(0, 0, 640, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plr47"]
+atlas = ExtResource("15_pjg0s")
+region = Rect2(640, 0, 640, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti75i"]
+atlas = ExtResource("15_pjg0s")
+region = Rect2(1280, 0, 640, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqh0k"]
+atlas = ExtResource("15_pjg0s")
+region = Rect2(1920, 0, 640, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4f5d0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lusf4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plr47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti75i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqh0k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
 [node name="Forest" type="Node2D"]
+
+[node name="EncounterHandler" type="Node" parent="."]
+
+[node name="Timer" type="Timer" parent="EncounterHandler"]
+wait_time = 60.0
+one_shot = true
+autostart = true
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_nd818")
@@ -171,6 +217,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_najfl")
+
+[node name="Rain" type="AnimatedSprite2D" parent="Player/UI"]
+visible = false
+position = Vector2(320, 180)
+sprite_frames = SubResource("SpriteFrames_4f5d0")
+frame = 2
+frame_progress = 0.366341
+script = ExtResource("16_om7dv")
+
+[node name="RainAmbience" type="AudioStreamPlayer" parent="Player/UI/Rain"]
+stream = ExtResource("17_ixwit")
+volume_db = -15.0
+bus = &"Ambience"
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 unique_name_in_owner = true
