@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqgwospqru37w"]
+[gd_scene load_steps=10 format=3 uid="uid://bqgwospqru37w"]
 
 [ext_resource type="AudioStream" uid="uid://ddqnkjmdhoe0n" path="res://Audio/Ambience/Tavern Instrumental Amb.mp3" id="1_dv85e"]
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_qcaco"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bj3pjau2kkq8l" path="res://Scenes/UI/JobListingsUI.tscn" id="5_ok5pk"]
 [ext_resource type="PackedScene" uid="uid://bk0f3ah38kt3a" path="res://Scenes/UI/JobDescription.tscn" id="6_0d551"]
 [ext_resource type="PackedScene" uid="uid://12e8lclt0rrw" path="res://Scenes/Interactables/shop.tscn" id="7_rdbwb"]
+[ext_resource type="PackedScene" uid="uid://k41v2nsnmqrd" path="res://Scenes/Interactables/settingsNPC.tscn" id="9_mklqh"]
 
 [node name="Tavern" type="Node2D"]
 
@@ -15,6 +16,7 @@
 process_mode = 3
 stream = ExtResource("1_dv85e")
 autoplay = true
+bus = &"Ambience"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_qcaco")
@@ -34,6 +36,9 @@ position = Vector2(312, 184)
 
 [node name="Shop" parent="." instance=ExtResource("7_rdbwb")]
 position = Vector2(376, 200)
+
+[node name="SettingsArea" parent="." instance=ExtResource("9_mklqh")]
+position = Vector2(264, 264)
 
 [node name="UI" type="Control" parent="."]
 process_mode = 3

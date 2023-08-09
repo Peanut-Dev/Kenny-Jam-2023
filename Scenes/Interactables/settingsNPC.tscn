@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://k41v2nsnmqrd"]
+
+[ext_resource type="PackedScene" uid="uid://3r523tqmg7w7" path="res://Scenes/Interactables/GenericInteractable.tscn" id="1_fqwm6"]
+[ext_resource type="Script" path="res://Scripts/Interactable/SettingsNPC.gd" id="2_rlcwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uw2ai"]
+size = Vector2(30, 30)
+
+[node name="SettingsArea" instance=ExtResource("1_fqwm6")]
+script = ExtResource("2_rlcwg")
+showInteractText = true
+interactText = "Open settings"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_uw2ai")
