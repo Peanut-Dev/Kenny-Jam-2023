@@ -1,0 +1,107 @@
+[gd_scene load_steps=8 format=3 uid="uid://7wwtb1hll0av"]
+
+[ext_resource type="FontFile" uid="uid://bpvbpriimlfrk" path="res://Fonts/Kenney Mini.ttf" id="1_p4hhl"]
+[ext_resource type="Script" path="res://Scripts/UI/ShopUI.gd" id="1_pxprb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boj61"]
+bg_color = Color(0.364706, 0.364706, 0.364706, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qgpgf"]
+font = ExtResource("1_p4hhl")
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j3i0q"]
+font = ExtResource("1_p4hhl")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_awqpe"]
+font = ExtResource("1_p4hhl")
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_54rbm"]
+font = ExtResource("1_p4hhl")
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pxprb")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_boj61")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Shop"
+label_settings = SubResource("LabelSettings_qgpgf")
+horizontal_alignment = 1
+
+[node name="GoldAmount" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Current gold amount:"
+label_settings = SubResource("LabelSettings_j3i0q")
+
+[node name="CompassContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CompassLabel" type="Label" parent="MarginContainer/VBoxContainer/CompassContainer"]
+layout_mode = 2
+text = "Compass: 80 gold"
+label_settings = SubResource("LabelSettings_awqpe")
+
+[node name="CompassButton" type="Button" parent="MarginContainer/VBoxContainer/CompassContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_p4hhl")
+text = "Purchase"
+
+[node name="ReturnButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_p4hhl")
+text = "Return"
+
+[node name="PurchaseResultLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_54rbm")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CompassContainer/CompassButton" to="." method="Purchase" binds= ["Compass"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ReturnButton" to="." method="ReturnButtonPressed"]

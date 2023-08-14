@@ -1,4 +1,9 @@
 extends Node
 
 # Vars
-var Gold : int;
+var Gold : int
+# Upgrades
+var Compass = {
+	"Owned" : false,
+	"Price" : 80
+}

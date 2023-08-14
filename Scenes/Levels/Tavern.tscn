@@ -34,7 +34,7 @@ scene = "res://Scenes/Levels/Town.tscn"
 process_mode = 3
 position = Vector2(312, 184)
 
-[node name="Shop" parent="." instance=ExtResource("7_rdbwb")]
+[node name="ShopArea" parent="." instance=ExtResource("7_rdbwb")]
 position = Vector2(376, 200)
 
 [node name="SettingsArea" parent="." instance=ExtResource("9_mklqh")]

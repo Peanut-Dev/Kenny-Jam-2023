@@ -11,6 +11,8 @@ func _ready():
 	
 	if JobData.currentJob != jobID:
 		hide()
+	else:
+		JobData.ItemNode = self
 
 func _process(delta):
 	if isInRange == true and JobData.currentJob == jobID and Input.is_action_just_pressed("interact"):

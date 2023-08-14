@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b60hcccgm5aog"]
+[gd_scene load_steps=29 format=3 uid="uid://b60hcccgm5aog"]
 
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="1_20urm"]
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_hfbwt"]
@@ -14,7 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://byp6fbgs8c84h" path="res://Audio/SFX/Campfire_1.wav" id="8_ss770"]
 [ext_resource type="AudioStream" uid="uid://d4llfgokqmt74" path="res://Audio/Ambience/horror_amb_v3_constant_59.wav" id="9_f14i1"]
 [ext_resource type="FontFile" uid="uid://bpvbpriimlfrk" path="res://Fonts/Kenney Mini.ttf" id="10_y6rcr"]
-[ext_resource type="Texture2D" uid="uid://dxevckm4lnh0q" path="res://Sprites/Arrow.png" id="14_01kmg"]
+[ext_resource type="Texture2D" uid="uid://ctwj4ewvyk808" path="res://icon.svg" id="14_s3l3q"]
 [ext_resource type="Texture2D" uid="uid://13pn0j1iwweo" path="res://Sprites/RainAnimation.png" id="15_pjg0s"]
 [ext_resource type="Script" path="res://Scripts/Rain.gd" id="16_om7dv"]
 [ext_resource type="AudioStream" uid="uid://chi3jkhuwdj6n" path="res://Audio/Ambience/heavy rain 3.wav" id="17_ixwit"]
@@ -35,9 +35,6 @@ bg_color = Color(0, 0, 0, 1)
 font = ExtResource("10_y6rcr")
 outline_size = 1
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hjvkj"]
-light_mode = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_najfl"]
 bg_color = Color(0.27451, 0.176471, 0.239216, 1)
@@ -207,11 +204,9 @@ label_settings = SubResource("LabelSettings_0xl40")
 autowrap_mode = 2
 
 [node name="Arrow" type="Sprite2D" parent="Player/UI/ClosedEyes"]
-visible = false
-material = SubResource("CanvasItemMaterial_hjvkj")
-position = Vector2(320, 229)
+position = Vector2(575, 305)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("14_01kmg")
+texture = ExtResource("14_s3l3q")
 
 [node name="JobDescription" parent="Player/UI" instance=ExtResource("3_3x08o")]
 unique_name_in_owner = true

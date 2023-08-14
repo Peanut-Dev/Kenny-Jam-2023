@@ -2,6 +2,7 @@
 extends Node
 
 var currentJob : int;
+var ItemNode
 var itemData = {};
 var dataFilePath = "res://Data/Jobs.json";
 
