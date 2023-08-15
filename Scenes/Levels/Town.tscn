@@ -11,6 +11,7 @@
 [node name="Town" type="Node2D"]
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
+process_mode = 3
 stream = ExtResource("1_d8wqa")
 autoplay = true
 bus = &"Ambience"

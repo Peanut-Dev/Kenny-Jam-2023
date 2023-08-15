@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0vwrnqq3pvp8"]
+
+[ext_resource type="PackedScene" uid="uid://3r523tqmg7w7" path="res://Scenes/Interactables/GenericInteractable.tscn" id="1_sskog"]
+[ext_resource type="Texture2D" uid="uid://2xaqtvoy4y6h" path="res://Sprites/1bit.png" id="2_admlp"]
+[ext_resource type="Script" path="res://Scripts/Interactable/MissingItems.gd" id="2_wgatv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7cd4"]
+atlas = ExtResource("2_admlp")
+region = Rect2(391, 68, 16, 16)
+
+[node name="Diamond" instance=ExtResource("1_sskog")]
+script = ExtResource("2_wgatv")
+jobID = 7
+showInteractText = true
+interactText = "Pickup diamond"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_v7cd4")

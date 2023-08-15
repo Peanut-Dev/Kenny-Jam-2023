@@ -54,6 +54,18 @@
 			"Reward" : 5,
 			"Completed" : false,
 			"Hint" : "A cabbage patch is usually where wild animals love to hang out the most"
+		},
+		{
+			"ID" : 7,
+			"Name" : "Diamond in the night sky",
+			"Description" : "A diamond shines as bright as a thousand bright stars.
+			The person you took the job from did seem like he had something off with him...
+			
+			Maybe finding his diamond will reveal something?",
+			"Reward" : 10,
+			"Completed" : false,
+			"StoryText" : "You hold the bright shimmering diamond in your hand... You feel a force jolt through your body like a electric shock.",
+			"Hint" : "A ritual ground often contains valuable goods"
 		}
 	]
 }

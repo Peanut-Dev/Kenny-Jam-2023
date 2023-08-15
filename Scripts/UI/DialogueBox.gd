@@ -15,18 +15,21 @@ func _ready():
 	dialogue = getDialogue();
 	assert(dialogue.size() > 0, "Dialogue not found");
 	nextDialogue();
-	
+
 func _process(delta):
 	if (Input.is_action_just_pressed("interact")):
 		if (!finished):
 			textBox.visible_characters = len(textBox.text);
 			return;
-			
+		
 		nextDialogue();
+		
+		if currentDialogue >= dialogue.size():
+			get_tree().set_pause(false);
 
 func getDialogue() -> Array:
 	assert(FileAccess.file_exists(dialoguePath), "Dialogue not found");
-
+	
 	var f: FileAccess = FileAccess.open(dialoguePath, FileAccess.READ);
 	var output = JSON.parse_string(f.get_as_text());
 	
@@ -34,7 +37,7 @@ func getDialogue() -> Array:
 		return output;
 		
 	return [];
-	
+
 func nextDialogue() -> void:
 	if (currentDialogue >= dialogue.size()):
 		queue_free();
@@ -51,5 +54,3 @@ func nextDialogue() -> void:
 	
 	finished = true;
 	currentDialogue += 1;
-	
-	get_tree().set_pause(false);
