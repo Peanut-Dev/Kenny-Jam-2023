@@ -4,7 +4,7 @@
 			"ID" : 1,
 			"Name" : "Find necklace",
 			"Description" : "Someone has lost their necklace in the forest, they are wanting you to go out and find it",
-			"Reward" : 5,
+			"Reward" : 7,
 			"Completed" : false,
 			"Hint" : "The trees hold the truth"
 		},
@@ -51,7 +51,7 @@
 			"ID" : 6,
 			"Name" : "Lost bow",
 			"Description" : "A hunter has lost his bow and is needing someone to help find it",
-			"Reward" : 5,
+			"Reward" : 7,
 			"Completed" : false,
 			"Hint" : "A cabbage patch is usually where wild animals love to hang out the most"
 		},
