@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqgwospqru37w"]
+[gd_scene load_steps=12 format=3 uid="uid://bqgwospqru37w"]
 
 [ext_resource type="AudioStream" uid="uid://ddqnkjmdhoe0n" path="res://Audio/Ambience/Tavern Instrumental Amb.mp3" id="1_dv85e"]
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_qcaco"]
@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dem37vnymerub" path="res://Scenes/Interactables/JobBoard.tscn" id="4_aatj8"]
 [ext_resource type="PackedScene" uid="uid://bj3pjau2kkq8l" path="res://Scenes/UI/JobListingsUI.tscn" id="5_ok5pk"]
 [ext_resource type="PackedScene" uid="uid://bk0f3ah38kt3a" path="res://Scenes/UI/JobDescription.tscn" id="6_0d551"]
+[ext_resource type="PackedScene" uid="uid://ctqydsy5ncj3t" path="res://Scenes/Hints/ExclamationMark.tscn" id="6_16434"]
 [ext_resource type="PackedScene" uid="uid://12e8lclt0rrw" path="res://Scenes/Interactables/shop.tscn" id="7_rdbwb"]
+[ext_resource type="PackedScene" uid="uid://b60412nn1r8h7" path="res://Scenes/Hints/QuestionMark.tscn" id="8_jeaii"]
 [ext_resource type="PackedScene" uid="uid://k41v2nsnmqrd" path="res://Scenes/Interactables/settingsNPC.tscn" id="9_mklqh"]
 
 [node name="Tavern" type="Node2D"]
@@ -34,11 +36,29 @@ scene = "res://Scenes/Levels/Town.tscn"
 process_mode = 3
 position = Vector2(312, 184)
 
+[node name="ExclamationMark" parent="JobBoard" instance=ExtResource("6_16434")]
+offset_left = -8.0
+offset_top = -24.0
+offset_right = -8.0
+offset_bottom = -24.0
+
 [node name="ShopArea" parent="." instance=ExtResource("7_rdbwb")]
 position = Vector2(376, 200)
 
+[node name="QuestionMark" parent="ShopArea" instance=ExtResource("8_jeaii")]
+offset_left = -8.0
+offset_top = -26.0
+offset_right = -8.0
+offset_bottom = -26.0
+
 [node name="SettingsArea" parent="." instance=ExtResource("9_mklqh")]
 position = Vector2(264, 264)
+
+[node name="QuestionMark" parent="SettingsArea" instance=ExtResource("8_jeaii")]
+offset_left = -8.0
+offset_top = -24.0
+offset_right = -8.0
+offset_bottom = -24.0
 
 [node name="UI" type="Control" parent="."]
 process_mode = 3

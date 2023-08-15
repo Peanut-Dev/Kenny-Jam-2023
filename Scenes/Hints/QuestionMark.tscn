@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b60412nn1r8h7"]
+
+[ext_resource type="Script" path="res://Scripts/Floating.gd" id="1_gbmhb"]
+[ext_resource type="Texture2D" uid="uid://2xaqtvoy4y6h" path="res://Sprites/1bit.png" id="2_1c0i0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m34lt"]
+atlas = ExtResource("2_1c0i0")
+region = Rect2(646, 221, 16, 16)
+
+[node name="QuestionMark" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gbmhb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.062
+anchor_bottom = 0.111
+offset_right = 0.32
+offset_bottom = 0.0399971
+texture = SubResource("AtlasTexture_m34lt")
+
+[node name="SwitchTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="SwitchTimer" to="." method="TimerTimeout"]

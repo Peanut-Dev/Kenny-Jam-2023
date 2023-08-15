@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctqydsy5ncj3t"]
+
+[ext_resource type="Script" path="res://Scripts/Floating.gd" id="1_bfgyg"]
+[ext_resource type="Texture2D" uid="uid://2xaqtvoy4y6h" path="res://Sprites/1bit.png" id="1_f16xc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c7pt"]
+atlas = ExtResource("1_f16xc")
+region = Rect2(595, 221, 16, 16)
+
+[node name="ExclamationMark" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bfgyg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.913725, 0, 0, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.062
+anchor_bottom = 0.111
+offset_right = 0.32
+offset_bottom = 0.0399971
+texture = SubResource("AtlasTexture_7c7pt")
+
+[node name="SwitchTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="SwitchTimer" to="." method="TimerTimeout"]
