@@ -71,18 +71,21 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Job completed:"
 label_settings = SubResource("LabelSettings_xnwuv")
+autowrap_mode = 2
 
 [node name="MoneyEarned" type="Label" parent="MarginContainer/JobComplete"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Money earned: "
 label_settings = SubResource("LabelSettings_xnwuv")
+autowrap_mode = 2
 
 [node name="Balance" type="Label" parent="MarginContainer/JobComplete"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Balance: "
 label_settings = SubResource("LabelSettings_xnwuv")
+autowrap_mode = 2
 
 [node name="Button" type="Button" parent="MarginContainer/JobComplete"]
 layout_mode = 2
