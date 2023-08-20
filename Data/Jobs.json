@@ -66,6 +66,16 @@
 			"Completed" : false,
 			"StoryText" : "You hold the bright shimmering diamond in your hand... You feel a force jolt through your body like a electric shock.",
 			"Hint" : "A ritual ground often contains valuable goods"
+		},
+		{
+			"ID" : 8,
+			"Name" : "A lone dagger",
+			"Description" : "What could someone be doing to get a dagger lost in the woods?
+			It's not your position to question or judge anyway, let's just get this one over with quickly",
+			"Reward" : 13,
+			"Completed" : false,
+			"StoryText" : "The dagger is warm... as if it was recently held by someone. There's also blood on it... it tastes... fresh?",
+			"Hint" : "Rumour has it a homeless person was killed in the woods recently, maybe he used the lost knife to defend himself?"
 		}
 	]
 }
