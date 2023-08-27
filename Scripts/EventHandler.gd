@@ -17,5 +17,14 @@ func EventHandler(Body : Node2D, Event : String, DialoguePath : String = ""):
 			var DialogueBox = DialogueBoxScene.instantiate()
 			DialogueBox.dialoguePath = DialoguePath
 			UINode.add_child(DialogueBox)
+		"DaggerEvent":
+			if JobData.currentJob != 8:
+				return
+			
+			print("Dagger event")
+			
+			var DialogueBox = DialogueBoxScene.instantiate()
+			DialogueBox.dialoguePath = DialoguePath
+			UINode.add_child(DialogueBox)
 		_:
 			print("Event not found!")

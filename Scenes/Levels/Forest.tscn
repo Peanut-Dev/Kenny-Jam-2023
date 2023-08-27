@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b60hcccgm5aog"]
+[gd_scene load_steps=35 format=3 uid="uid://b60hcccgm5aog"]
 
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="1_20urm"]
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_hfbwt"]
@@ -24,6 +24,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s513g"]
 size = Vector2(400, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ao0bs"]
+size = Vector2(600, 600)
 
 [sub_resource type="Gradient" id="Gradient_bpxt5"]
 offsets = PackedFloat32Array(0, 0.674208)
@@ -86,13 +89,6 @@ animations = [{
 
 [node name="Forest" type="Node2D"]
 
-[node name="EncounterHandler" type="Node" parent="."]
-
-[node name="Timer" type="Timer" parent="EncounterHandler"]
-wait_time = 60.0
-one_shot = true
-autostart = true
-
 [node name="Ambience" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("1_nd818")
@@ -122,6 +118,12 @@ position = Vector2(1112, 760)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Events/DiamondEvent"]
 shape = SubResource("RectangleShape2D_s513g")
+
+[node name="DaggerEvent" type="Area2D" parent="Events"]
+position = Vector2(-408, 616)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Events/DaggerEvent"]
+shape = SubResource("RectangleShape2D_ao0bs")
 
 [node name="Interactables" type="Node2D" parent="."]
 top_level = true
@@ -285,3 +287,4 @@ range_layer_max = 1
 shadow_color = Color(1, 0, 0, 1)
 
 [connection signal="body_entered" from="Events/DiamondEvent" to="Events" method="EventHandler" binds= ["DiamondEvent", "res://Data/Dialogue/Events/DiamondEvent.json"]]
+[connection signal="body_entered" from="Events/DaggerEvent" to="Events" method="EventHandler" binds= ["DaggerEvent", "res://Data/Dialogue/Events/DaggerEvent.json"]]
