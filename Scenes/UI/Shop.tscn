@@ -78,7 +78,7 @@ layout_mode = 2
 
 [node name="CompassLabel" type="Label" parent="MarginContainer/VBoxContainer/CompassContainer"]
 layout_mode = 2
-text = "Compass: 80 gold"
+text = "Compass: 40 gold"
 label_settings = SubResource("LabelSettings_awqpe")
 
 [node name="CompassButton" type="Button" parent="MarginContainer/VBoxContainer/CompassContainer"]
