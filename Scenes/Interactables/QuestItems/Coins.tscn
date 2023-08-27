@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmxvva2u5wn8i"]
+
+[ext_resource type="PackedScene" uid="uid://3r523tqmg7w7" path="res://Scenes/Interactables/GenericInteractable.tscn" id="1_ktj0r"]
+[ext_resource type="Script" path="res://Scripts/Interactable/MissingItems.gd" id="2_jeq21"]
+[ext_resource type="Texture2D" uid="uid://2xaqtvoy4y6h" path="res://Sprites/1bit.png" id="2_tex7p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xygi4"]
+atlas = ExtResource("2_tex7p")
+region = Rect2(697, 68, 16, 16)
+
+[node name="Coins" instance=ExtResource("1_ktj0r")]
+script = ExtResource("2_jeq21")
+jobID = 9
+showInteractText = true
+interactText = "Pickup coins"
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = SubResource("AtlasTexture_xygi4")

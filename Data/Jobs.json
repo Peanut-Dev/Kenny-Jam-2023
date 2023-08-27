@@ -76,6 +76,14 @@
 			"Completed" : false,
 			"StoryText" : "The dagger is warm... as if it was recently held by someone. There's also blood on it... it tastes... fresh?",
 			"Hint" : "Rumour has it a homeless person was killed in the woods recently, maybe he used the lost knife to defend himself?"
+		},
+		{
+			"ID" : 9,
+			"Name" : "Shimmering gold",
+			"Description" : "Without gold one cannot survive, their life depends on you",
+			"Reward" : 7,
+			"Completed" : false,
+			"Hint" : "Near a river bend is where gold usually shimmers"
 		}
 	]
 }

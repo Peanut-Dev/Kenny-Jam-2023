@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://b60hcccgm5aog"]
+[gd_scene load_steps=36 format=3 uid="uid://b60hcccgm5aog"]
 
 [ext_resource type="PackedScene" uid="uid://bdawrk1coc02i" path="res://Scenes/Player.tscn" id="1_20urm"]
 [ext_resource type="TileSet" uid="uid://b08ctjcm553we" path="res://TileSets/TileSet.tres" id="1_hfbwt"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://b0vwrnqq3pvp8" path="res://Scenes/Interactables/QuestItems/Diamond.tscn" id="9_s1rff"]
 [ext_resource type="FontFile" uid="uid://bpvbpriimlfrk" path="res://Fonts/Kenney Mini.ttf" id="10_y6rcr"]
 [ext_resource type="PackedScene" uid="uid://jkiunxfg1eux" path="res://Scenes/Interactables/QuestItems/Dagger.tscn" id="11_cxdx5"]
+[ext_resource type="PackedScene" uid="uid://cmxvva2u5wn8i" path="res://Scenes/Interactables/QuestItems/Coins.tscn" id="12_asmma"]
 [ext_resource type="Texture2D" uid="uid://dxevckm4lnh0q" path="res://Sprites/Arrow.png" id="14_01kmg"]
 [ext_resource type="Texture2D" uid="uid://13pn0j1iwweo" path="res://Sprites/RainAnimation.png" id="15_pjg0s"]
 [ext_resource type="Script" path="res://Scripts/Rain.gd" id="16_om7dv"]
@@ -151,6 +152,9 @@ position = Vector2(1112, 760)
 
 [node name="Dagger" parent="Interactables" instance=ExtResource("11_cxdx5")]
 position = Vector2(-408, 616)
+
+[node name="Coins" parent="Interactables" instance=ExtResource("12_asmma")]
+position = Vector2(8, -312)
 
 [node name="Lights" type="Node2D" parent="."]
 
